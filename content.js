@@ -1,3 +1,3 @@
-document.addEventListener("selectionchange", e => {
-  chrome.runtime.sendMessage({selection: getSelection().toString()});
+document.addEventListener("selectionchange", () => {
+  chrome.runtime.sendMessage({ selection: getSelection().toString() });
 });

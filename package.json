@@ -1,0 +1,11 @@
+{
+  "name": "gibberish-to-hangul-translator",
+  "version": "1.0",
+  "author": "AJ Magracia",
+  "repository": "https://github.com/ajmagracia/Gibberish-to-Hangul-Translator",
+  "license": "MIT",
+  "devDependencies": {
+    "prettier": "^2.3.1"
+  },
+  "private": true
+}
