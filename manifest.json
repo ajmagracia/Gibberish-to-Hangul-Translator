@@ -2,7 +2,7 @@
   "manifest_version": 3,
   "name": "Gibberish to Hangul Translator",
   "description": "Translates the seemingly random letters often used as Korean usernames into the Hangul they represent.",
-  "version": "1.0",
+  "version": "0.0.1",
   "author": "AJ Magracia",
   "background": {
     "service_worker": "background.js"
@@ -16,5 +16,9 @@
     }
   ],
   "host_permissions": ["<all_urls>"],
-  "permissions": ["activeTab", "contextMenus", "scripting", "tabs"]
+  "permissions": ["activeTab", "contextMenus", "scripting", "tabs"],
+  "icons": {
+    "48": "gth_small.png",
+    "128": "gth.png"
+  }
 }
