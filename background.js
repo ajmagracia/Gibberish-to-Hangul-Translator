@@ -216,7 +216,7 @@ chrome.runtime.onInstalled.addListener(() => {
 });
 
 chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
-  if ("selection" in message) {
+  if ("selection" in message && message.selection.length) {
     chrome.contextMenus.update("gibberishToHangulResult", {
       title: `${convertLettersToHangul(message.selection)}`,
     });
@@ -230,6 +230,7 @@ chrome.tabs.onActivated.addListener((info) => {
       function: getSelectionText,
     },
     (results) => {
+      if (!results) return;
       chrome.contextMenus.update("gibberishToHangulResult", {
         title: `${convertLettersToHangul(results[0])}`,
       });
